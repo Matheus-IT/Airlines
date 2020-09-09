@@ -1,2 +1,3 @@
 db.sqlite3
-flights/__pycache__/admin.cpython-37.pyc
+flights/__pycache__/
+Airlines/__pycache__/
