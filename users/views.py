@@ -29,4 +29,7 @@ def login(request):
 
 
 def logout(request):
-    pass
+    auth_logout(request)
+    return render(request, 'users/login.html', {
+        'message': 'Logged out.'
+    })
