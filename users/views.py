@@ -8,6 +8,8 @@ def index(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse('users:login'))
 
+    return render(request, 'users/user.html')
+
 
 def login(request):
     if request.method == 'POST':
@@ -22,8 +24,8 @@ def login(request):
             return render(request, 'users/login.html', {
                 'message': 'Invalid credentials.'
             })
-
-    return render(request, 'users/login.html')
+    else:
+        return render(request, 'users/login.html')
 
 
 def logout(request):
