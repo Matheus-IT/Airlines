@@ -11,8 +11,8 @@ def index(request):
 
 def login(request):
     if request.method == 'POST':
-        username = request.POST('username')
-        password = request.POST('password')
+        username = request.POST['username']
+        password = request.POST['password']
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
@@ -22,6 +22,8 @@ def login(request):
             return render(request, 'users/login.html', {
                 'message': 'Invalid credentials.'
             })
+
+    return render(request, 'users/login.html')
 
 
 def logout(request):
