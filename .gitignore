@@ -1,3 +1,4 @@
+.vscode
 db.sqlite3
 Airlines/__pycache__/*
 flights/__pycache__/*
